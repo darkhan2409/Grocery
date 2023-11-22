@@ -43,7 +43,7 @@ class Customer(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=15, unique=True)
+    phone = models.CharField(max_length=25, unique=True)
     birth_date = models.DateField(null=True, blank=True)
     wallet = models.PositiveIntegerField(default=0)
     is_staff = models.BooleanField(default=False)
